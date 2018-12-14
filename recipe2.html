@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Lobster+Two" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css?family=Chakra+Petch" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Chakra+Petch|Indie+Flower" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	  <script src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="recipe2.css">
+    <link rel="stylesheet" href="./csslider.light.css" />
+
+
+</head>
+<body>
+<div id="header">
+  <div class="jumbotron text-center" style="margin-bottom:0" id="div-main">
+  <h1><font color="white"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>  Recipe Finder</font></h1>
+  <p><font color="white">make awesome dish at home :)</font></p> 
+
+  <div class="jumbotron text-center" style="margin-bottom:0">
+  <div class="container">
+  <div class="input-group">
+  <input type="text" class="form-control input-lg" id="input1" placeholder="keywords"><span class="input-group-addon btn btn-primary" onclick="search()">GO</span>
+  </div>
+  <br>
+  <form role="form">
+<div class="form-group select_two">
+  <select class="form-control cuisine2" id="select_d">
+    <option value = "0">All difficulties</option>
+    <option value="easy">easy</option>
+    <option value="medium">medium</option>
+    <option value="hard">hard</option>
+  </select>
+
+    <select class="form-control cuisine3" id="select_c">
+    <option value ='0'>All cuisines</option>
+    <option value = "chinese">Chinese</option>
+    <option value="italian">Italian</option>
+    <option value="japanese">Japanese</option>
+    <option value="mexican">Mexican</option>
+    <option value="thai">Thai</option>
+    <option value="french">French</option>
+  </select>
+  </div>
+
+</form> 
+ 
+  </div><div><input  class="reset" type="button" value="Reset" onclick="reset()" /></div>
+
+  </div>
+  </div>
+
+</div>
+<div id="nav" class="box effect7">
+<p class="nav_title">QUICK SEARCH</p>
+<p class="filter_title"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>search by cuisine</p>
+<p id="cuisine"></p>
+<p class="filter_title"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>search by difficulty</p>
+<p id="diff"></p>
+<input class="reset" type="button" value="search" onclick="quick_search();" />
+</div>
+
+<br>
+<div id="slider1" class="csslider infinity inside">
+        <input type="radio" name="slides" id="slides_1" checked />
+        <input type="radio" name="slides" id="slides_2" />
+        <input type="radio" name="slides" id="slides_3" />
+        <input type="radio" name="slides" id="slides_4" />
+        <ul>
+            <li>
+        <h1 class="wel"> WELCOME TO RECIPE FINDER!</h1>
+        <h2 > Quickly browse thousands of our professionally tested recipes for any and every occasion. </h2>
+                <h3 class="wel"> Start by:<br> - quick search <br>- advanced search <br> - keywords search</h2>
+<!--                 <img src="11.png" />
+ -->            </li>
+            <li>
+          <a href="info.html?id=2" target='_BLANK'>
+              <img border="0" src="steak.jpg" height="320" width="800" />
+          </a>
+          <h3 class="wel">RECIPE OF TODAY: Grilled Skirt Steak with Roasted Potatoes <h3>
+      </li>
+            <li>
+          <a href="info.html?id=16" target='_BLANK'>
+              <img border="0" src="beef.jpg" height="320" width="800" />
+          </a>
+          <h3 class="wel">RECIPE OF TODAY: Beef Stew  <h3>
+      </li>
+        </ul>
+        <div class="arrows">
+            <label for="slides_1"></label>
+            <label for="slides_2"></label>
+            <label for="slides_3"></label>
+        </div>
+        <div class="navigation">
+            <div>
+                <label for="slides_1"></label>
+                <label for="slides_2"></label>
+                <label for="slides_3"></label>
+            </div>
+        </div>
+    </div>
+
+
+
+<div id="section">
+<div id="parent"></div>
+</div>
+
+
+<div id="footer">
+Contact us: chen238@usc.edu  dny@usc.edu<br>
+
+</div>
+<script type="text/javascript" src="recipe.js"></script>
+
+</body>
+
+</script>
+
+<script src="https://www.gstatic.com/firebasejs/5.5.4/firebase.js"></script>
+<script>
+  // Initialize Firebase
+
+  var config = {
+    apiKey: "AIzaSyBMXVrpnt4O2a_oJusY831qcg_AlOBM7qQ",
+    authDomain: "recipe-c5b9c.firebaseapp.com",
+    databaseURL: "https://recipe-c5b9c.firebaseio.com",
+    projectId: "recipe-c5b9c",
+    storageBucket: "recipe-c5b9c.appspot.com",
+    messagingSenderId: "918923383757"
+  };
+  firebase.initializeApp(config);
+  //var dbRef = firebase.database().ref("metadata/keywords_index/"+index);
+  //alert(dbRef);
+  //dbRef.on('value',snap => value.innerText = snap.val());
+  
+</script>
+</html>

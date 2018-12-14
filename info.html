@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="info.js"></script>
+<script src="pdfobject.js"></script>
+<script type="text/javascript">
+  window.onload = function(){
+    var getId = getQueryString; //引用abc函数
+    var id2 = getId("id");
+    var pdfRef = firebase.storage().ref("pdf/"+id2+'.pdf');
+    pdfRef.getDownloadURL().then(function(url) {
+    var pdf_url = url;
+    console.log(pdf_url);
+    PDFObject.embed(pdf_url, "#example1");
+
+
+
+    
+    //return pdf_url;
+      //viewPdf(pdf_url);
+    });
+
+    var iRef=firebase.database().ref("metadata/pdf/"+id2)
+    iRef.on('value',function(snapshot){
+    var title= new String(snapshot.val().title);
+    var author = new String(snapshot.val().author);
+    var creationDate = new String(snapshot.val().creationDate);
+    var h1 = document.getElementById("h1");
+    h1.innerText= title;
+    var a = document.getElementById("author");
+    a.innerText= "Author: "+author;
+    var d = document.getElementById("date");
+    d.innerText= "creationDate: "+creationDate;
+      });
+    
+
+
+  };
+
+
+
+     
+ </script>
+	<title>info</title>
+	<meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Lobster+Two" rel="stylesheet">  
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="info.css">
+</head>
+<body>
+  <div id="header">
+  <div class="jumbotron text-center" style="margin-bottom:0" id="div-main">
+  <h1 id="h1"></font></h1>
+  <p id="author"></p> 
+  <p id="date"></p>
+  </div>
+
+</div>
+	<p id="info_page"></p>
+	<div id="example1"></div>
+
+
+</body>
+
+<script src="https://www.gstatic.com/firebasejs/5.5.4/firebase.js"></script>
+<script>
+  // Initialize Firebase
+
+  var config = {
+    apiKey: "AIzaSyBMXVrpnt4O2a_oJusY831qcg_AlOBM7qQ",
+    authDomain: "recipe-c5b9c.firebaseapp.com",
+    databaseURL: "https://recipe-c5b9c.firebaseio.com",
+    projectId: "recipe-c5b9c",
+    storageBucket: "recipe-c5b9c.appspot.com",
+    messagingSenderId: "918923383757"
+  };
+  firebase.initializeApp(config);
+  //var dbRef = firebase.database().ref("metadata/keywords_index/"+index);
+  //alert(dbRef);
+  //dbRef.on('value',snap => value.innerText = snap.val());
+  
+</script>
+</html>

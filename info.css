@@ -1,0 +1,26 @@
+a {
+	width: 1000px;
+	height: : 600px:;
+
+}
+
+
+
+.pdfobject-container { 
+	height:120rem; border: 1rem solid rgba(0,0,0,.1);
+}
+
+#author,#date{
+	font-size: 15px;
+	color: white;
+}
+#h1 {
+	color: white;
+}
+
+#div-main {
+    background-image: url('top.jpg');
+    background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+}

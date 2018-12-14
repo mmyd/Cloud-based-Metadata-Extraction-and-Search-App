@@ -1,0 +1,218 @@
+#header {
+    background-color:black;
+    color:white;
+    text-align:center;
+ 
+}
+#nav {
+    line-height:30px;
+    background-color:#ebebe0;
+    height:500px;
+    width:20%;
+    float:left;
+    padding:5px; 
+    margin:30px 30px;
+}
+
+.nav_title {
+    font-family: 'Indie Flower', cursive;
+    font-size: 18px;
+}
+
+.filter_title {
+    font-family:'Indie Flower', cursive;/* 'Lobster Two', cursive;*/
+    font-size: 17px;
+}
+
+#section {
+    width:70%;
+    float:left;
+    padding:10px; 
+    margin-right: 10px;
+}
+#footer {
+    background-color:grey;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:5px; 
+}
+
+#div-main {
+    background-image: url('bb.png');
+    background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+}
+.jumbotron {
+    background-color: transparent;
+}
+
+#div-main {
+    background-image: url('bb.png');
+    background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+}
+
+#parent {
+    width: 100%;
+    height: 100%;
+
+}
+/*.res {
+    border:1px dashed grey;
+    width: 990px;
+    height: 35%;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    position: relative;
+    background-color:#eeeeee;
+    
+}*/
+
+.thumbnail a>img {
+  width: 250px;
+  height: 180px;
+}
+
+.thumbnail {
+    height: 450px;
+}
+
+.intro {
+    width: 75%;
+    margin: 10px 10px; 
+    float: right;
+}
+
+.d {
+    border:2px solid red;
+    position: relative; 
+}
+
+.result_img {
+
+    margin:10px 10px;
+
+}
+
+.title {
+    font-family: 'Lobster Two', cursive;
+    font-size: 25px;
+}
+
+.otherinfo {
+    font-size: 18px;
+}
+
+
+.box {
+  width: 70%;
+  height: 200px;
+  background: #FFF;
+  margin: 40px auto;
+}
+.effect7 {
+  position: relative;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect7:before,
+.effect7:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  top: 0;
+  bottom: 0;
+  left: 10px;
+  right: 10px;
+  -moz-border-radius: 100px / 10px;
+  border-radius: 100px / 10px;
+}
+
+.effect7:after {
+  right: 10px;
+  left: auto;
+  -webkit-transform: skew(8deg) rotate(3deg);
+  -moz-transform: skew(8deg) rotate(3deg);
+  -ms-transform: skew(8deg) rotate(3deg);
+  -o-transform: skew(8deg) rotate(3deg);
+  transform: skew(8deg) rotate(3deg);
+}
+
+
+.input-group {
+    width: 800px;
+    margin: auto;
+}
+
+.select_two {
+    position: relative;
+    float: left;
+    left: 25%;
+    background: lightblue;
+}
+.cuisine2 {
+width: 300px;
+float:left;
+}
+
+.cuisine3 {
+width: 300px;
+margin-left: 10rem;
+}
+
+#slider1{
+    width:73%;
+    float:left;
+    padding:25px; 
+    margin-right: 30px;
+    margin-top: 10px;
+/*    background-image: url("11.jpg");
+*/  background: url(11.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+
+
+body{
+   min-width:1400px;
+}
+
+
+.rot{
+   font-family: 'Indie Flower', cursive;
+    font-size: 29px;
+}
+
+.wel {
+  font-family: 'Acme', sans-serif;
+}
+
+.reset {
+    background-color:#e7e7e7; 
+    border: 30;
+    color: black;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.footer{
+   font-family: 'Indie Flower', cursive;
+  
+}
+
